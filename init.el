@@ -42,9 +42,6 @@
 (when *raz/load-custom-file*
   (load custom-file t :no-error :no-message))
 
-;; (when (eq system-type 'gnu/linux)
-;;   (guix-emacs-autoload-packages))
-
 (if (eq system-type 'windows-nt)
     (set-frame-parameter nil 'undecorated nil))
 
@@ -63,8 +60,8 @@
 ;; Load Modules
 ;; Macros/Helper functions
 (require 'raz-subrx)
-;; Base + IDE
-(require 'raz-base)
+;; Core + Base pkgs + IDE
+(require 'raz-base) ;TODO - split into Core + Base (core external pkgs)
 (require 'raz-completions-mct)
 (require 'raz-lisp-ide)
 ;; (require 'raz-guile-ide)
@@ -73,6 +70,5 @@
 (require 'raz-media)
 (require 'raz-org)
 (require 'raz-erc)
-;; (require 'raz-nyxt) ; WIP
-;;TODO - need to configure on new GUIX Home scaffold
+;;TODO - need to configure mail for Fedora
 ;; (require 'raz-mu4e)

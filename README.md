@@ -1,14 +1,15 @@
-#+TITLE: =(defmacro raz-emacs (init &rest modules) ...)=
+# Emacs Config
 
-* Introduction
+## Introduction
 
 My personal modular Emacs Configuration established for Fedora Linux.
 
-* Outline
+## Outline
 
 I Will eventually get to defining out the specific initilization of 'raz-emacs' and
 it's core/optional modules, that are called after core initialization...
 
-* References
- 1. TBD
- 2. TBD
+## References
+
+- TBD
+- TBD

@@ -11,11 +11,10 @@
 ;;  ‘forward-page’ (`C-x ]’ or `C-]’),
 ;;  ‘backward-page’ (`C-x [’ or `C-[’), and `narrow-to-page' (‘C-x n p’).
 
-
 ;; Code:
-;; TODO: Revmove dependencies on del-emacs-defhook macro...
-;;       not a very efficient implementation, need to fix before it can be deployed...
-;;TODO - define variables using `use-package' `:custom' keyword where possible.
+
+
+;;; Core (TODO -> raz-core.el)
 
 ;;
 ;; File Settings: Auto Save, Backups, History, Bookmark, and Recent Files.
@@ -80,7 +79,7 @@
   :config
   (recentf-mode))
 
-
+;;
 ;; Coding/Editing Defaults
 ;;
 ;; .dir-local variables for development projects
@@ -151,6 +150,8 @@
                  'append)))))
 
 
+;;; Base -> raz-base.el (TODO: separate)
+
 ;;
 ;; External Package Path's Configuration
 ;;

@@ -11,16 +11,6 @@
 ;; PATHs, Environment & Configuration Variables
 ;;
 
-;; Set GUIX packages to Emacs Load Path
-;; (defvar raz/guix-emacs-packages-path
-;;   (expand-file-name "~/.guix-home/profile/share/emacs/site-lisp/")
-;;   "Guix Home Profile Emacs Packages PATH.")
-
-;; (when (eq system-type 'gnu/linux)
-;;   ;; Set some guix specific configurations...
-;;   (load (concat raz/guix-emacs-packages-path "subdirs.el") :no-error :no-message)
-;;   (add-to-list 'load-path raz/guix-emacs-packages-path))
-
 ;; Variables/Functions defining configuration
 (defvar *raz/load-custom-file* nil
   "When non-nil, load `custome.el' after user's config file, `config.el'.")
@@ -165,17 +155,6 @@
 ;;
 
 (setq package-enable-at-startup t)
-
-;; FIXME - Determine how to handle package loading between
-;;         `GUIX' and `package.el' and `use-package' abilities to leverage both
-;;         systems.
-;; https://www.reddit.com/r/emacs/comments/jhb2i6/
-;; guix_the_right_way_to_manage_your_packages/
-
-;; Guix Home PATH (for reference)
-;; (load-file "~/.guix-home/profile/share/emacs/site-lisp/subdirs.el")
-;; For Guix system (for reference) - `use-package' seems to handle this...
-;; (load-file "~/.guix-profile/share/emacs/site-lisp/subdirs.el")
 
 (require 'package)
 
