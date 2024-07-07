@@ -44,6 +44,8 @@
 
   ;; See: https://joaotavora.github.io/sly/#Loading-Slynk-faster
   (defun raz/sly-auto-connect ()
+    "Auto connect to general sbcl (default) slynk session."
+    (interactive)
     (unless (sly-connected-p)
       (save-excursion (sly)))))
 
