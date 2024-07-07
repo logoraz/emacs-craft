@@ -1,24 +1,20 @@
-;; early-init.el - Emacs Early Initialization File -*- lexical-binding: t -*-
+;;;; early-init.el - Emacs Early Initialization File -*- lexical-binding: t -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary:
+;;; Commentary:
 
-;; Code:
 
-
-;;
-;; PATHs, Environment & Configuration Variables
-;;
+;;; Code:
+
+;;; PATHs, Environment & Configuration Variables
 
 ;; Variables/Functions defining configuration
 (defvar *raz/load-custom-file* nil
   "When non-nil, load `custome.el' after user's config file, `config.el'.")
 
 
-;;
-;; Compilation Settings
-;;
+;;; Compilation Settings
 
 (setq load-prefer-newer t
       warning-suppress-log-types '((comp) (initialization))
@@ -37,9 +33,8 @@
       (expand-file-name "var/eln-cache/" user-emacs-directory)))))
 
 
-;;
-;; Performance Optimizations/Tweaks
-;;
+;;; Performance Optimizations/Tweaks
+
 
 ;; Disable Dialogs/Echos/Bells & Startup Frames/Screens/Buffers
 (setq-default init-file-user user-login-name
@@ -71,7 +66,7 @@
   "Capture the default value of `gc-cons-threshold' for restoration.")
 (setq gc-cons-threshold most-positive-fixnum)
 
-;; ;; Temporarily disable file-handling during startup.
+;; Temporarily disable file-handling during startup.
 (defvar raz/file-name-handler-alist file-name-handler-alist
   "Capture the default value of `file-name-handler-alist' for restoration.")
 (setq file-name-handler-alist nil)
@@ -90,9 +85,8 @@
                   vc-handled-backends raz/vc-handled-backends)))
 
 
-;;
-;; Set Frame Parameters & UI/UX Configuration Variables
-;;
+;;; Set Frame Parameters & UI/UX Configuration Variables
+
 
 ;; See Window Frame parameters
 ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Window-Frame-Parameters.html
@@ -150,9 +144,8 @@
 (raz/avoid-initial-flash-of-light)
 
 
-;;
-;; Package Management System & Loading Preferences
-;;
+;;; Package Management System & Loading Preferences
+
 
 (setq package-enable-at-startup t)
 

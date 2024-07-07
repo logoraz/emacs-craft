@@ -1,20 +1,18 @@
-;; init.el - Emacs Initialization File -*- lexical-binding: t -*-
+;;;; init.el - Emacs Initialization File -*- lexical-binding: t -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary:
-;; TODO: change del-emacs-setq-customized -- setq (more efficient)
-
-;; Code:
+;;; Commentary:
 
 
-
-;; Define:= Cusotomizations UI for Del Emacs.
+;;; Code:
+
+;;; Define:= Cusotomizations UI for Logoraz (aka raz) Emacs.
 
 (defgroup raz nil
-  "Del Emacs"
+  "raz Emacs"
   :tag "raz Emacs"
-  :link '(url-link "https://github.com/logoraz/guix-craft")
+  :link '(url-link "https://github.com/logoraz/emacs-craft")
   :group 'emacs)
 
 (defvar *raz-var-directory* (expand-file-name "var/" user-emacs-directory)
@@ -30,7 +28,8 @@
                                                   user-emacs-directory)
   "Default Emacs Modules directory.")
 
-;; Add the elisp & modules directories to the load path
+
+;;; Add the elisp & modules directories to the load path
 (add-to-list 'load-path *raz-elisp-directory*)
 (add-to-list 'load-path *raz-modules-directory*)
 
@@ -46,6 +45,7 @@
     (set-frame-parameter nil 'undecorated nil))
 
 
+;;; Load in Package Modules
 
 ;; Enable `use-package' statistics - must be set before any `use-package' forms.
 ;; Run command M-x `use-package-report' to see
@@ -61,10 +61,11 @@
 ;; Macros/Helper functions
 (require 'raz-subrx)
 ;; Core + Base pkgs + IDE
-(require 'raz-base) ;TODO - split into Core + Base (core external pkgs)
+(require 'raz-core)
+(require 'raz-base)
 (require 'raz-completions-mct)
 (require 'raz-lisp-ide)
-;; (require 'raz-guile-ide)
+;; (require 'raz-guile-ide) ;TODO needs to be overhauled...
 ;; Notes/Office/Mail + Multimedia
 (require 'raz-denote)
 (require 'raz-media)
