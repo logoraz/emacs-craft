@@ -1,20 +1,18 @@
-;; raz-org.el --- Advanced Office Tools -*- lexical-binding: t; -*-
+;;;; raz-org.el --- Advanced Office Tools -*- lexical-binding: t; -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary/References:
-;; TODO - Enable Spell Check for Org Mode
-;;      - Use either Ispell, Aspell, or Enchant (Research)...
+;;; Commentary/References:
+;;; TODO - Enable Spell Check for Org Mode
+;;;      - Use either Ispell, Aspell, or Enchant (Research)...
 
-;; References:
-;; 1. Babel Languages: https://orgmode.org/worg/org-contrib/babel/languages/index.html
-;; 2. tbd
-;; 3. tbd
-;; 4. tbd
+;;; References:
+;;; 1. Babel Languages: https://orgmode.org/worg/org-contrib/babel/languages/index.html
+;;; 2. tbd
+;;; 3. tbd
+;;; 4. tbd
 
-
-
-;; Code:
+;;; Code:
 
 (use-package org
   :diminish org-mode
@@ -167,7 +165,7 @@
                                        ("bib" . "src bibtex")
                                        ("cm"  . "comment"))))
 
-;; External Packages
+;;; External Packages
 (use-package org-appear
   :ensure t
   :diminish org-appear-mode
@@ -195,6 +193,8 @@
   :diminish visual-line-mode
   :hook (g(org-mode . visual-line-fill-column-mode)))
 
+
 
+
 
 (provide 'raz-org)

@@ -1,12 +1,11 @@
-;; raz-mu4e.el --- Advanced eMail Management -*- lexical-binding: t; -*-
+;;;; raz-mu4e.el --- Advanced eMail Management -*- lexical-binding: t; -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary/References:
-;; FIXME: Configure GPG w/o having to use pinentry...
+;;; Commentary/References:
+;;; FIXME: Configure GPG w/o having to use pinentry...
 
-
-;; Code:
+;;; Code:
 
 (use-package mu4e
   :disabled
@@ -79,6 +78,7 @@
           ("/Fastmail/Home"   . ?h)
           ("/Fastmail/Work"   . ?w)
           ("/Fastmail/News"   . ?n))))
+
 
 
 

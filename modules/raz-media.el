@@ -1,13 +1,12 @@
-;; raz-media.el --- Multimedia Management -*- lexical-binding: t; -*-
+;;;; raz-media.el --- Multimedia Management -*- lexical-binding: t; -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary/References:
-;; See MPC (bundled in Emacs): https://www.emacswiki.org/emacs/Mpc
-;; See EMMS: https://www.emacswiki.org/emacs/EMMS
+;;; Commentary/References:
+;;; See MPC (bundled in Emacs): https://www.emacswiki.org/emacs/Mpc
+;;; See EMMS: https://www.emacswiki.org/emacs/EMMS
 
-
-;; Code:
+;;; Code:
 
 (use-package bongo
   :if (eq system-type 'gnu/linux)
@@ -29,6 +28,7 @@
   (bongo-enabled-backends '(vlc mpv))
   :config
   (setq bongo-logo nil))
+
 
 
 

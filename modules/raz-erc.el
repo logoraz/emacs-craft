@@ -1,23 +1,31 @@
-;; raz-erc.el --- IRC Framework -*- lexical-binding: t -*-
+;;;; raz-erc.el --- IRC Framework -*- lexical-binding: t -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary/References:
+;;; Commentary/References:
 
-(setq erc-server "irc.libera.chat"
-      erc-nick "logoraz"
-      erc-user-full-name "Erik Almaraz"
-      erc-track-shorten-start 8
-      ;;    erc-autojoin-channels-alist '(("irc.libera.chat" "#systemcrafters" "#emacs"))
-      erc-kill-buffer-on-part t
-      erc-auto-query 'bury
-      erc-fill-function 'erc-fill-static
-      ;;      erc-track-exclude-server-buffer t
-      erc-track-exclude-types '("JOIN" "NICK" "QUIT" "MODE" "AWAY" "PART")
-      erc-hide-list '("JOIN" "NICK" "QUIT" "MODE" "AWAY" "PART")
-      erc-pals '("daviwil" "Fade" "SummerEmacs" "benoitj" "BigEatie")
-      erc-fill-column 75)
+;;; Code
 
+(use-package erc
+  :custom
+  (erc-server "irc.libera.chat")
+  (erc-nick "logoraz")
+  (erc-user-full-name "Erik P. Almaraz")
+  (erc-track-shorten-start 8)
+  ;; erc-autojoin-channels-alist '(("irc.libera.chat" "#systemcrafters" "#emacs"))
+  (erc-kill-buffer-on-part t)
+  (erc-auto-query 'bury)
+  (erc-fill-function 'erc-fill-static)
+  ;; erc-track-exclude-server-buffer t
+  (erc-track-exclude-types '("JOIN" "NICK" "QUIT" "MODE" "AWAY" "PART"))
+  (erc-hide-list '("JOIN" "NICK" "QUIT" "MODE" "AWAY" "PART"))
+  (erc-pals '("daviwil"
+              "Fade"
+              "jmercouris"
+              "drmeister"
+              "paulapatience"
+              "bike"))
+  (erc-fill-column 75))
 
 (use-package erc-hl-nicks
   :ensure t

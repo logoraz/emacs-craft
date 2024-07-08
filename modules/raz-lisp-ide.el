@@ -1,22 +1,22 @@
-;; raz-lisp-ide.el --- Lisp IDE via SLY -*- lexical-binding: t -*-
+;;;; raz-lisp-ide.el --- Lisp IDE via SLY -*- lexical-binding: t -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary:
-;;
+;;; Commentary:
+;;;
 
-;; References
-;; 1. http://joaotavora.github.io/sly/#A-SLY-tour-for-SLIME-users
-;; 2. Source: https://github.com/joaotavora/sly
-;;
-;; TODO:
-;;   1. Setup/Configure Nyxt extension
-;;   2. Setup/Configure stumpwm-mode extension
-;;   3. Look into:  M-. -> runs the command sly-edit-definition (found in sly-mode-map),
-;;      which is an interactive native-compiled Lisp function in ‘sly.el’.
+;;; References
+;;; 1. http://joaotavora.github.io/sly/#A-SLY-tour-for-SLIME-users
+;;; 2. Source: https://github.com/joaotavora/sly
+;;;
+;;; TODO:
+;;;   1. Setup/Configure Nyxt extension
+;;;   2. Setup/Configure stumpwm-mode extension
+;;;   3. Look into:  M-. -> runs the command sly-edit-definition (found in sly-mode-map),
+;;;      which is an interactive native-compiled Lisp function in ‘sly.el’.
 
 
-;; Code:
+;;; Code:
 
 (use-package sly
   :ensure t
@@ -50,7 +50,7 @@
       (save-excursion (sly)))))
 
 
-
 
+
 
 (provide 'raz-lisp-ide)

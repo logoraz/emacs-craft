@@ -1,12 +1,11 @@
-;; raz-completions-mct.el --- Completions Framework -*- lexical-binding: t -*-
+;;;; raz-completions-mct.el --- Completions Framework -*- lexical-binding: t -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary/References:
-;;   See built-in completion UI framework `icomplete', `ido', `fido'
+;;; Commentary/References:
+;;;   See built-in completion UI framework `icomplete', `ido', `fido'
 
-
-;; Code:
+;;; Code:
 ;;TODO - define variables using `use-package' `:custom' keyword where possible.
 
 (use-package orderless
@@ -24,13 +23,12 @@
   :config
   (marginalia-mode))
 
-;;FIXME - Investigate further mode-line active/inactive bug and report or try to
-;;        fix.
-;;ISSUE - Mode Line in window stays active when focus has switched to
-;;        completions buffer - seems to happen when completions buffer is
-;;        automatically updated or manually requested through "TAB" activation...
+;; FIXME - Investigate further mode-line active/inactive bug and report or try to
+;;         fix.
+;; ISSUE - Mode Line in window stays active when focus has switched to
+;;         completions buffer - seems to happen when completions buffer is
+;;         automatically updated or manually requested through "TAB" activation...
 ;;
-
 (use-package mct
   :ensure t
   :diminish mct-mode
@@ -76,10 +74,8 @@
   (mct-mode))
 
 
-;; Completions
-;;FIXME: Had to install via 'gnu' archive, something was going wrong with melpa - also,
-;; package archives did not respect alist order - should have check gnu first,
-;; is there a way to set a prefered archive/source for 'packages'.
+;;; Completions
+
 (use-package corfu
   :ensure t
   :diminish corfu-mode

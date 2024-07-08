@@ -1,17 +1,13 @@
-;; raz-denote.el --- Enhanced Notetaking -*- lexical-binding: t; -*-
+;;;; raz-denote.el --- Enhanced Notetaking -*- lexical-binding: t; -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary/References:
-;; Denote Configuration
-;; https://protesilaos.com/emacs/denote
-
-
-;; Code:
+;;; Commentary/References:
+;;; Denote Configuration
+;;; https://protesilaos.com/emacs/denote
 
 
-
-
+;;; Code:
 
 
 (use-package denote
@@ -71,5 +67,6 @@
      '("journal"))))
 
 
+
 
 (provide 'raz-denote)

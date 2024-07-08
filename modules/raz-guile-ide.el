@@ -1,19 +1,20 @@
-;; raz-guile-ide.el --- Guile IDE via Ares/Arei -*- lexical-binding: t -*-
+;;;; raz-guile-ide.el --- Guile IDE via Ares/Arei -*- lexical-binding: t -*-
 
-;; Author: Erik P. Almaraz
+;;; Author: Erik P. Almaraz
 
-;; Commentary/References
-;; 1. nREPL RPC server - https://git.sr.ht/~abcdw/guile-ares-rs
-;; 2. Emacs nREPL bindings - https://git.sr.ht/~abcdw/emacs-arei
-;; 3. Sesman - https://github.com/vspinu/sesman?tab=readme-ov-file
-;; 4. Corfu (COmpletions in Region FUnction) - https://github.com/minad/corfu
-;; 5.
+;;; Commentary/References
+;;; 1. nREPL RPC server - https://git.sr.ht/~abcdw/guile-ares-rs
+;;; 2. Emacs nREPL bindings - https://git.sr.ht/~abcdw/emacs-arei
+;;; 3. Sesman - https://github.com/vspinu/sesman?tab=readme-ov-file
+;;; 4. Corfu (COmpletions in Region FUnction) - https://github.com/minad/corfu
+;;; 5.
 
-;; TODO: Tell ares-rs where to search for Guix stuff
-;; it may work if you set `export
-;; GUILE_LOAD_PATH=$GUIX_ENVIRONMENT/share/guile/site/3.0`
-
-;; Code:
+;;; TODO: Tell ares-rs where to search for Guix stuff
+;;; it may work if you set `export
+;;; GUILE_LOAD_PATH=$GUIX_ENVIRONMENT/share/guile/site/3.0`
+
+
+;;; Code:
 
 (use-package arei
   :if (eq system-type 'gnu/linux)
@@ -54,20 +55,8 @@
 
 (use-package sesman
   :disabled
-  :if (eq system-type 'gnu/linux)
-  :config
-  )
+  :if (eq system-type 'gnu/linux))
 
-
-;; Guix install of `emacs-guix' comes with:
-;; emacs-bui, emacs-dash, emacs-edit-indirect,
-;; emacs-geiser, emacs-geiser-guile, emacs-magit-popup
-;; module-import-compiled
-(use-package guix
-  :if (eq system-type 'gnu/linux)
-  :ensure t
-  :config
-  (setq geiser-mode-auto-p nil))
 
 
 
