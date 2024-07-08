@@ -65,10 +65,10 @@
   :config
   ;; For some odd reason lisp mode & extensions are set to use scheme symbol
   ;; Fixing here - setting mode icon alist doesn't work but extensions icon alist does..
-  ;; Also changing the color to light green
+  ;; Also changing the color to light silver..
   ;; ("lisp" nerd-icons-sucicon "nf-custom-scheme" :face nerd-icons-orange)
   (add-to-list 'nerd-icons-extension-icon-alist
-               '("lisp" nerd-icons-sucicon "nf-custom-common_lisp" :face nerd-icons-lgreen)))
+               '("lisp" nerd-icons-sucicon "nf-custom-common_lisp" :face nerd-icons-lsilver)))
 
 (use-package doom-modeline
   :ensure t
