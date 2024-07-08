@@ -24,7 +24,7 @@
       (face
        '((default :font "Fira Code" :height 110)
          (fixed-pitch :font "Fira Code" :height 110)
-         (variable-pitch :font "Amiri" :height 110)))
+         (variable-pitch :font "Nimbus Sans" :height 110)))
     (raz/set-face-attribute (car face) (cdr face)))
   ;; Enable the "www" ligature in every possible major mode
   (ligature-set-ligatures 't '("www"))
@@ -57,8 +57,18 @@
 ;; (load-theme 'kanagawa t)
 ;; https://github.com/tinted-theming/base16-emacs
 
-(use-package nerd-icons
+(use-package all-the-icons
   :ensure t)
+
+(use-package nerd-icons
+  :ensure t
+  :config
+  ;; For some odd reason lisp mode & extensions are set to use scheme symbol
+  ;; Fixing here - setting mode icon alist doesn't work but extensions icon alist does..
+  ;; Also changing the color to light green
+  ;; ("lisp" nerd-icons-sucicon "nf-custom-scheme" :face nerd-icons-orange)
+  (add-to-list 'nerd-icons-extension-icon-alist
+               '("lisp" nerd-icons-sucicon "nf-custom-common_lisp" :face nerd-icons-lgreen)))
 
 (use-package doom-modeline
   :ensure t
@@ -79,10 +89,10 @@
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
   ;; Enable custom neotree theme (all-the-icons must be installed!)
-  (doom-themes-neotree-config)
+  ;; (doom-themes-neotree-config)
   ;; or for treemacs users
-  (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
-  (doom-themes-treemacs-config)
+  ;; (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
+  ;; (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
