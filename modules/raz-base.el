@@ -63,12 +63,13 @@
 (use-package nerd-icons
   :ensure t
   :config
-  ;; For some odd reason lisp mode & lisp extensions are set to use scheme symbol...
-  ;; Fix - manual setting extensions icon alist, mode icon alist doesn't work.
+  ;; For some odd reason lisp extensions & lisp mode are set to use scheme symbol...
+  ;; Fix - manual set icon alists
   ;; Also changing the color to light silver, see reference code from nerd-icons.el
-  ;; ("lisp" nerd-icons-sucicon "nf-custom-scheme" :face nerd-icons-orange)
   (add-to-list 'nerd-icons-extension-icon-alist
-               '("lisp" nerd-icons-sucicon "nf-custom-common_lisp" :face nerd-icons-lsilver)))
+               '("lisp" nerd-icons-sucicon "nf-custom-common_lisp" :face nerd-icons-lsilver))
+  (add-to-list 'nerd-icons-mode-icon-alist
+               '(lisp-mode nerd-icons-sucicon "nf-custom-common_lisp" :face nerd-icons-lsilver)))
 
 (use-package doom-modeline
   :ensure t
